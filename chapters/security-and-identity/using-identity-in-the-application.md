@@ -71,7 +71,8 @@ Since you're now passing an `ApplicationUser` parameter to `GetIncompleteItemsAs
 ```csharp
 public interface ITodoItemService
 {
-    Task<TodoItem[]> GetIncompleteItemsAsync(ApplicationUser user);
+    Task<TodoItem[]> GetIncompleteItemsAsync(
+        ApplicationUser user);
     
     // ...
 }

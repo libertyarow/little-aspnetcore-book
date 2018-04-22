@@ -308,8 +308,9 @@ You can inject the `UserManager` directly into a view to do these types of autho
     {
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a asp-controller="ManageUsers" asp-action="Index">
-                    Manage Users
+                <a asp-controller="ManageUsers" 
+                   asp-action="Index">
+                   Manage Users
                 </a>
             </li>
         </ul>
@@ -330,9 +331,7 @@ To include this partial in the main layout, edit `_Layout.cshtml` and add it in 
 ```html
 <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+        <!-- existing code here -->
     </ul>
     @await Html.PartialAsync("_LoginPartial")
     @await Html.PartialAsync("_AdminActionsPartial")
